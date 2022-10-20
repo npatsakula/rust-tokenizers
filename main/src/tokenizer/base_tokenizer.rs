@@ -466,6 +466,7 @@ pub struct TokenIdsWithOffsets {
 }
 
 /// # Base trait for tokenizers
+#[enum_dispatch::enum_dispatch]
 pub trait Tokenizer<T: Vocab> {
     /// returns a reference to the tokenizer vocabulary
     fn vocab(&self) -> &T;
